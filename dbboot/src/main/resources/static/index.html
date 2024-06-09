@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script
+				id="sap-ui-bootstrap"
+				src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-resource-roots='{
+					"anubhav": "./"
+				}'>
+
+			</script>
+			
+			<script>
+				/*var oBtn = new sap.m.Button({
+					text: "click me",
+					press: function() {
+						alert('Welcome');
+					}
+				})*/
+				
+				var oView = sap.ui.view({
+					viewName: "anubhav.view.App",
+					type: "XML"
+				})
+				
+				
+				var oView1 = sap.ui.view({
+					viewName: "anubhav.view.View1",
+					type: "XML"
+				})
+				oView.byId('idApp').addPage(oView1);
+				oView.placeAt('content');	
+			</script>	
+	</head>
+	<body class="sapUiBody">
+		<div id="content"></div>
+	</body>
+</html>
